@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan Kumar S | Application Consultant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-heading: #1e293b;
+            --text-body: #334155;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* Sidebar / Profile Card */
+        aside {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+
+        .profile-card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .profile-card h1 {
+            font-size: 1.8rem;
+            color: var(--text-heading);
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .role-tag {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .contact-list { list-style: none; }
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .contact-list i { color: var(--primary); width: 16px; }
+        .contact-list a { text-decoration: none; color: inherit; transition: 0.2s; }
+        .contact-list a:hover { color: var(--primary); }
+
+        /* Main Content */
+        main section {
+            background: var(--card);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i { color: var(--primary); }
+
+        .experience-item, .edu-item, .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .experience-item:last-child { border: none; padding-bottom: 0; }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .job-title, .edu-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-heading);
+        }
+
+        .company-name {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .date-loc {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        ul { padding-left: 18px; margin-top: 10px; }
+        ul li { margin-bottom: 6px; font-size: 0.95rem; }
+
+        /* Two Column Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .cert-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .cert-pill::before {
+            content: "\f0a1";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .skills-content strong {
+            display: block;
+            margin-top: 15px;
+            color: var(--text-heading);
+            font-size: 0.95rem;
+        }
+        
+        .skills-content p { margin-bottom: 5px; font-size: 0.95rem; }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 850px) {
+            .container { grid-template-columns: 1fr; }
+            aside { position: relative; top: 0; }
+            .cert-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="profile-card">
+            <h1>Mohan Kumar S</h1>
+            <span class="role-tag">Application Consultant – STIBO MDM</span>
+            
+            <ul class="contact-list">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:mohanmks9945@gmail.com">mohanmks9945@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> +91 8618164986</li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohanmks10" target="_blank">LinkedIn Profile</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section>
+            <h2><i class="fas fa-user-circle"></i> Profile</h2>
+            <p>Results-driven Application Consultant with 4+ years of experience delivering enterprise-level Master Data Management (MDM) solutions using STIBO STEP platform. Expertise in data modeling, workflow configuration, system integration, and end-to-end MDM implementations. Proven ability to design scalable, business-aligned solutions that improve data quality, governance, and operational efficiency.</p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="job-title">Application Consultant</span>
+                    <span class="date-loc">06/2022 – Present | Bengaluru</span>
+                </div>
+                <div class="company-name">Stibo Systems</div>
+                <ul>
+                    <li>Certified STIBO Systems Application Track and PDX consultant, delivering expert-level solutions on the STIBO STEP MDM platform for enterprise clients.</li>
+                    <li>Collaborated with cross-functional teams, including Engineering, Technical Support, Cloud, and Professional Services, to troubleshoot and resolve complex MDM issues.</li>
+                    <li>Designed and optimized data models, workflows, and configurations to improve implementation efficiency, root cause analysis, and problem resolution timelines.</li>
+                    <li>Led customization and optimization initiatives to enhance data quality, governance, and system performance across enterprise data ecosystems.</li>
+                    <li>Consistently recognized by customers and internal teams for delivering scalable, business-aligned MDM solutions.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="job-title">Associate Managed Services Consultant</span>
+                    <span class="date-loc">06/2021 – 06/2022 | Remote</span>
+                </div>
+                <div class="company-name">Sprinklr</div>
+                <ul>
+                    <li>Worked as a hybrid Implementation and Managed Services Consultant supporting enterprise clients on the Sprinklr platform.</li>
+                    <li>Analyzed business requirements, identified operational pain points, and translated them into tailored platform solutions.</li>
+                    <li>Created detailed Business Requirement Documents (BRDs) and delivered solution demonstrations, achieving a 100% successful implementation rate.</li>
+                    <li>Led end-to-end Email Care implementation for India’s largest banking client, onboarding 100+ users ahead of schedule.</li>
+                    <li>Designed advanced analytical and reporting dashboards, improving data-driven decision-making efficiency by 25%.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="job-title">Android Developer Intern</span>
+                    <span class="date-loc">12/2019 – 03/2020 | Mysuru</span>
+                </div>
+                <div class="company-name">Savitar Technologies</div>
+                <ul>
+                    <li>Contributed to the design and development of user-centric Android applications with a focus on UX/UI best practices.</li>
+                    <li>Collaborated with cross-functional teams to translate business and user requirements into functional mobile solutions.</li>
+                    <li>Conducted usability testing and incorporated feedback to enhance application performance and user experience.</li>
+                    <li>Documented design decisions and development processes to support knowledge sharing and team collaboration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="edu-item">
+                <div class="edu-title">Master of Computer Application</div>
+                <div class="company-name">Jain University (06/2021 – 10/2023)</div>
+                <p>Specialized in cyber security, gaining expertise in secure software development, data protection, and system vulnerabilities, equipping skills for robust enterprise solutions.</p>
+            </div>
+            <div class="edu-item">
+                <div class="edu-title">Bachelor of Computer Application</div>
+                <div class="company-name">NIE First Grade College (06/2017 – 10/2020)</div>
+                <p>Developed a strong foundation in computer science, programming, and application development, fostering problem-solving and technical skills for real-world IT challenges.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-code"></i> Skills</h2>
+            <div class="skills-content">
+                <strong>MDM & Data Management:</strong>
+                <p>STIBO STEP, Data Modeling, Data Governance, Data Quality, Workflow Configuration, MDM Implementations, System Integration</p>
+                
+                <strong>STIBO Platform Expertise:</strong>
+                <p>STEP Configuration, Customization, PDX, Workflows, Web UI, Syndication, Troubleshooting, Performance Optimization, Product Information Management (PIM), Hierarchy Management</p>
+                
+                <strong>Sprinklr Platform:</strong>
+                <p>Modern Care, Email Care, Managed Services, Reporting & Analytics, Business Requirement Analysis</p>
+                
+                <strong>Programming & Databases:</strong>
+                <p>Java, JavaScript, SQL</p>
+                
+                <strong>Cloud & Infrastructure:</strong>
+                <p>Microsoft Azure Fundamentals, Resource Management, Cost Management, Virtual Machines, Storage</p>
+                
+                <strong>Web Technologies:</strong>
+                <p>WordPress Development, CMS Management, E-commerce Platforms</p>
+                
+                <strong>Tools & Practices:</strong>
+                <p>Root Cause Analysis, Debugging, Documentation, Client Communication</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+            <div class="project-item">
+                <div class="job-title">Azure Static Resume Website</div>
+                <ul>
+                    <li>Designed and deployed a personal resume website using Azure App Service.</li>
+                    <li>Configured GitHub Actions CI/CD pipeline for automated deployment.</li>
+                    <li>Resolved deployment issues related to missing package.json by converting to static HTML hosting.</li>
+                    <li>Optimized for performance, responsiveness, and cloud scalability.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="job-title">Svasthmysuru - Covid-19 Informative Website</div>
+                <ul>
+                    <li>Designed and developed a WordPress-based COVID-19 informational website to provide accurate and timely health resources to the community.</li>
+                    <li>Implemented user-friendly layouts and content structures to improve accessibility and engagement.</li>
+                    <li>Managed end-to-end development including hosting, content updates, and performance optimization.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-pill">Microsoft Certified: Azure Fundamentals (AZ-900)</div>
+                <div class="cert-pill">STIBO Data Management</div>
+                <div class="cert-pill">Sprinklr Research Analyst</div>
+                <div class="cert-pill">STIBO Application Track</div>
+                <div class="cert-pill">STIBO Data Modeling</div>
+                <div class="cert-pill">Sprinklr Modern Care Agent Pro</div>
+                <div class="cert-pill">STIBO MDM Fundamentals</div>
+                <div class="cert-pill">STIBO PDX Onboarding</div>
+                <div class="cert-pill">Master Microsoft Azure Fundamentals (Udemy)</div>
+                <div class="cert-pill">STIBO Workflows and Web UIs</div>
+                <div class="cert-pill">STIBO PDX Syndication</div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    © 2026 Mohan Kumar S | Azure Hosted Resume Website
+</footer>
+
+</body>
+</html>
